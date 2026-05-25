@@ -1,0 +1,10 @@
+{
+  "venvPath": "C:/Users/KinhLup/miniconda3/envs",
+  "venv": "bds_crawler",
+  "include": ["."],
+  "exclude": ["**/__pycache__", "**/.venv", "**/node_modules"],
+  "reportMissingImports": "warning",
+  "reportGeneralTypeIssues": "none",
+  "reportOptionalMemberAccess": "none",
+  "reportArgumentType": "none"
+}

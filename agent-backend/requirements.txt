@@ -1,0 +1,28 @@
+# Nâng cấp streamlit để hỗ trợ protobuf mới
+streamlit>=1.37.0
+pandas==2.2.0
+numpy==1.26.3
+plotly==5.18.0
+elasticsearch==8.11.0
+folium==0.15.1
+geopy==2.4.1
+openai-agents
+rich
+fastapi
+uvicorn
+langfuse
+# Tách logfire ra khỏi ngoặc vuông để tránh lỗi warning
+pydantic-ai
+logfire
+nest_asyncio
+datasets
+pymongo
+bcrypt
+python-jose==3.3.0
+zep-cloud
+# --- Bổ sung 2026-05-20: các package agent-backend cần ---
+openai>=1.40                                  # OpenAI SDK (sau migration từ Gemini sang)
+ddgs                                          # DuckDuckGo search (đổi tên từ duckduckgo-search cũ)
+python-dotenv                                 # load .env trong manager_gemini.py
+opentelemetry-sdk                             # tracing trong manager_gemini.py
+opentelemetry-exporter-otlp-proto-http        # OTLP exporter

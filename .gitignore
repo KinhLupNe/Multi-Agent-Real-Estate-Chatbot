@@ -1,0 +1,31 @@
+# Env files (chứa password, không commit)
+.env
+.env.aws
+.env.local
+.env.*
+!.env.example
+
+# Dump data — kích thước lớn, share qua kênh khác (zip + Drive/USB)
+es_dump/
+es_dump.zip
+es_snapshots_local/
+
+# Docker volume bind nếu có
+local_es/data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# IDE
+.vscode/
+.idea/
+*.iml

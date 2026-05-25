@@ -1,0 +1,182 @@
+2026-05-20 04:57:43 [scrapy.utils.log] INFO: Scrapy 2.15.2 started (bot: crawlerbds)
+2026-05-20 04:57:43 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.15.2',
+ 'cssselect': '1.4.0',
+ 'parsel': '1.11.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, '
+           '17:12:15) [MSC v.1942 64 bit (AMD64)]',
+ 'pyOpenSSL': '26.2.0 (OpenSSL 3.6.2 7 Apr 2026)',
+ 'cryptography': '48.0.0',
+ 'Platform': 'Windows-10-10.0.26200-SP0'}
+2026-05-20 04:57:43 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-05-20 04:57:43 [scrapy.extensions.telnet] INFO: Telnet Password: 0fcd1c0831b7dd86
+2026-05-20 04:57:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-05-20 04:57:43 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'crawlerbds',
+ 'DOWNLOAD_DELAY': 0.5,
+ 'DOWNLOAD_TIMEOUT': 600,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE_APPEND': False,
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawlerbds.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['crawlerbds.spiders']}
+2026-05-20 04:57:43 [scrapy-playwright] INFO: Started loop on separate thread: <ProactorEventLoop running=True closed=False debug=False>
+2026-05-20 04:57:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-05-20 04:57:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-05-20 04:57:44 [py.warnings] WARNING: C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\sklearn\utils\_param_validation.py:14: UserWarning: A NumPy version >=1.26.4 and <2.7.0 is required for this version of SciPy (detected version 1.26.3)
+  from scipy.sparse import csr_matrix, issparse
+
+2026-05-20 04:57:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawlerbds.pipelines.TextNormalizePipeline',
+ 'crawlerbds.pipelines.AddressCorretionPipeline',
+ 'crawlerbds.pipelines.FieldsPreprocessPipeline',
+ 'crawlerbds.pipelines.DuplicateCheckPipeline',
+ 'crawlerbds.pipelines.PushToKafka']
+2026-05-20 04:57:48 [scrapy.core.engine] INFO: Spider opened
+2026-05-20 04:57:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-05-20 04:57:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-05-20 04:57:48 [scrapy-playwright] INFO: Starting download handler
+2026-05-20 04:58:30 [scrapy.core.scraper] WARNING: Dropped: This real estate has already been collected at 30576893
+{'address': {'district': None,
+             'full_address': None,
+             'province': 'Hà N\u1ed9i',
+             'ward': None},
+ 'contact_info': {'name': 'V\u0169 \u0110\u1ee9c Nh\u1ea5t', 'phone': ['0865524xxx']},
+ 'description': 'Mô t\u1ea3 :',
+ 'estate_type': 'Nhà ph\u1ed1',
+ 'extra_infos': {'M\u1eb7t Ti\u1ec1n': '6 mm',
+                 'Pháp lý': 'S\u1ed5 \u0111\u1ecf/ S\u1ed5 h\u1ed3ng',
+                 'S\u1ed1 Phòng Ng\u1ee7': '1',
+                 'S\u1ed1 Phòng T\u1eafm': '6',
+                 'S\u1ed1 T\u1ea7ng': '7',
+                 '\u0110\u01b0\u1eddng Tr\u01b0\u1edbc Nhà': '25 mm'},
+ 'link': 'https://bds68.com.vn/ban-nha-mat-tien/ha-noi/cau-giay/duong-duy-tan/chinh-chu-gui-doc-quyen-ban--mat-pho-duy-tan-cau-giay-129m-mt-6m-7-tang-thang-may-kd-dinh-pr30576395',
+ 'post_date': '2026/05/19',
+ 'post_id': '30576395',
+ 'price': 90500000000.0,
+ 'square': 129.0,
+ 'title': 'Chính ch\u1ee7 g\u1eedi \u0111\u1ed9c quy\u1ec1n b . án m\u1eb7t ph\u1ed1 duy tân , c\u1ea7u gi\u1ea5y , 129 m , '
+          'mt 6 m , 7 t\u1ea7ng thang máy , kd \u0111\u1ec9nh !'}
+2026-05-20 04:58:39 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-05-20 04:58:39 [scrapy.extensions.feedexport] INFO: Stored json feed (59 items) in: test_hanoi_nhamatpho.json
+2026-05-20 04:58:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 29111,
+ 'downloader/request_count': 65,
+ 'downloader/request_method_count/GET': 65,
+ 'downloader/response_bytes': 886683,
+ 'downloader/response_count': 65,
+ 'downloader/response_status_count/200': 65,
+ 'elapsed_time_seconds': 51.316151,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 5, 19, 21, 58, 39, 548637, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 3547559,
+ 'httpcompression/response_count': 65,
+ 'item_dropped_count': 1,
+ 'item_dropped_reasons_count/DropItem': 1,
+ 'item_scraped_count': 59,
+ 'items_per_minute': 69.41176470588235,
+ 'log_count/INFO': 4,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 4,
+ 'response_received_count': 65,
+ 'responses_per_minute': 76.47058823529412,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 64,
+ 'scheduler/dequeued/memory': 64,
+ 'scheduler/enqueued': 64,
+ 'scheduler/enqueued/memory': 64,
+ 'start_time': datetime.datetime(2026, 5, 19, 21, 57, 48, 232486, tzinfo=datetime.timezone.utc)}
+2026-05-20 04:58:39 [scrapy.core.engine] INFO: Spider closed (finished)
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
+Message delivered to nhamatpho [1]
+Message delivered to nhamatpho [0]
