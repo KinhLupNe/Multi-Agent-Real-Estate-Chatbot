@@ -32,7 +32,7 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import SimpleSpanProcessor
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 
-load_dotenv(dotenv_path=find_dotenv())
+load_dotenv(dotenv_path=find_dotenv(), override=True)
 
 API_KEY = os.environ.get("ZEP_API_KEY")
 # Fallback user_id cho Zep khi caller không truyền. main.py thường set per-chat

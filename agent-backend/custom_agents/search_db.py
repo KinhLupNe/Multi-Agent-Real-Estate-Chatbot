@@ -22,7 +22,7 @@ from .elasticsearch_queries import search_posts, search_posts_strict
 from .agent_type import Post, Address, ContactInfo, ExtraInfos
 
 
-load_dotenv()
+load_dotenv(override=True)
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("Thiếu OPENAI_API_KEY trong .env")

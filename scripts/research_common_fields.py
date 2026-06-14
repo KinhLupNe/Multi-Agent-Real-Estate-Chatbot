@@ -18,7 +18,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 # .env nằm ở agent-backend/, dùng path tuyệt đối để chạy được từ mọi CWD
 ROOT = Path(__file__).resolve().parent.parent
-load_dotenv(dotenv_path=ROOT / "agent-backend" / ".env")
+load_dotenv(dotenv_path=ROOT / "agent-backend" / ".env", override=True)
 
 es = Elasticsearch(
     [f"http://{os.getenv('ES_HOST', '127.0.0.1')}:{os.getenv('ES_PORT', '9200')}"],

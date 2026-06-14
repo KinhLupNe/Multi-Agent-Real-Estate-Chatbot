@@ -8,7 +8,7 @@ from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
 
-load_dotenv()
+load_dotenv(override=True)
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("Thiếu OPENAI_API_KEY trong .env")

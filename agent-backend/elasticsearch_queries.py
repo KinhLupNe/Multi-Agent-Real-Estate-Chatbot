@@ -8,7 +8,7 @@ from datetime import date
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 es = Elasticsearch(
     [f"http://{os.getenv('ES_HOST', '127.0.0.1')}:{os.getenv('ES_PORT', '9200')}"],

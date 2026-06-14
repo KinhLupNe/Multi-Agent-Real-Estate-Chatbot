@@ -15,7 +15,29 @@ MAX_PAGE = 50
 # Skip mọi bài đăng có post_date < MIN_DATE. Đặt "" hoặc None để không filter.
 MIN_DATE = "2025-01-01"
 
-KAFKA_BOOTSTRAP_SERVERS = "3.107.83.111:32047"
+# Tự động truy vấn cổng NodePort của Kafka external listener từ K8s
+def get_kafka_bootstrap_servers():
+    env_val = os.environ.get("KAFKA_BOOTSTRAP_SERVERS")
+    if env_val:
+        return env_val
+
+    try:
+        # Chạy kubectl để lấy nodePort của service bootstrap ngoài
+        res = subprocess.run(
+            ["kubectl", "get", "svc", "my-cluster-kafka-external-bootstrap", "-n", "kafka", "-o", "jsonpath={.spec.ports[0].nodePort}"],
+            capture_output=True, text=True, check=True, shell=(os.name == "nt")
+        )
+        port = res.stdout.strip()
+        if port.isdigit():
+            return f"127.0.0.1:{port}"
+    except Exception as e:
+        print(f"⚠️ Không truy vấn được cổng Kafka từ K8s, dùng fallback: {e}")
+        pass
+
+    return "127.0.0.1:31608"  # Cổng mặc định của Kafka external bootstrap nodeport
+
+
+KAFKA_BOOTSTRAP_SERVERS = get_kafka_bootstrap_servers()
 
 # REVERSE=True: chạy ngược thứ tự task — ưu tiên bds68_spider trước bds_spider,
 # trong mỗi spider chạy estate_type idx LỚN trước (khác → đất → biệt thự → ... → nhà mặt phố).
