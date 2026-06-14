@@ -175,8 +175,10 @@ def run_crawl_task(task_args):
     )
 
     try:
+        # shell=False để chạy được cả Windows lẫn Linux (container Airflow).
+        # Với shell=True, Linux chỉ chạy mỗi "scrapy" và bỏ hết args → vỡ.
         result = subprocess.run(
-            cmd, capture_output=True, text=True, shell=True, env=os.environ.copy()
+            cmd, capture_output=True, text=True, env=os.environ.copy()
         )
 
         # 1. Đếm số message Kafka đã delivered thực tế (từ callback _delivery_report).

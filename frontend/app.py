@@ -379,6 +379,10 @@ with tab_dash:
         success = set_active_province(selected_province)
         if success:
             st.session_state.current_province = selected_province
+            # Tỉnh là state phía server, KHÔNG nằm trong tham số các hàm fetch
+            # (cache key chỉ có estate_type + listing_type). Nên phải xoá cache,
+            # nếu không Streamlit trả lại data đã cache của tỉnh trước.
+            st.cache_data.clear()
             st.toast(f"Đã chuyển dữ liệu sang: {selected_province}", icon="✅")
             st.rerun()
 

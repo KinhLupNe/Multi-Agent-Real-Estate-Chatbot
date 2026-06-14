@@ -16,6 +16,7 @@ def set_active_province(province_name: str):
  
 
 
+@st.cache_data(ttl=300)
 def price_by_date(estate_type_index: str, district: str, start_date, end_date, listing_type):
     endpoint = f"{BASE_URL}/get_price_by_date/{listing_type}/{estate_type_index}/{district}/{start_date}/{end_date}"
     response = requests.get(endpoint)
@@ -29,6 +30,7 @@ def price_by_date(estate_type_index: str, district: str, start_date, end_date, l
     return df.sort_values("Ngày", ascending=True)
 
 
+@st.cache_data(ttl=300)
 def price_per_square_by_date(estate_type_index: str, district: str, start_date, end_date, listing_type):
     endpoint = f"{BASE_URL}/get_price_per_square_by_date/{listing_type}/{estate_type_index}/{district}/{start_date}/{end_date}"
     response = requests.get(endpoint)
@@ -42,6 +44,7 @@ def price_per_square_by_date(estate_type_index: str, district: str, start_date, 
     return df.sort_values("Ngày", ascending=True)
 
 
+@st.cache_data(ttl=300)
 def price_by_district(estate_type_index: str, listing_type):
     endpoint = f"{BASE_URL}/get_price_by_district/{listing_type}/{estate_type_index}"
     response = requests.get(endpoint)
@@ -55,6 +58,7 @@ def price_by_district(estate_type_index: str, listing_type):
     return df.sort_values('Giá Trung Bình (VNĐ)', ascending=False)
 
 
+@st.cache_data(ttl=300)
 def price_per_square_by_district(estate_type_index: str, listing_type):
     endpoint = f"{BASE_URL}/get_price_per_square_by_district/{listing_type}/{estate_type_index}"
     response = requests.get(endpoint)
@@ -68,6 +72,7 @@ def price_per_square_by_district(estate_type_index: str, listing_type):
     return df.sort_values('Giá Trung Bình/m² (VNĐ)', ascending=False)
 
 
+@st.cache_data(ttl=300)
 def area_by_district(estate_type_index: str, listing_type):
     endpoint = f"{BASE_URL}/get_area_by_district/{listing_type}/{estate_type_index}"
     response = requests.get(endpoint)
@@ -85,12 +90,14 @@ def area_by_district(estate_type_index: str, listing_type):
 #  DASHBOARD V2 — fetch helpers
 # ============================================================
 
+@st.cache_data(ttl=300)
 def fetch_kpi(estate_type_index: str, listing_type: str):
     r = requests.get(f"{BASE_URL}/dashboard/kpi/{listing_type}/{estate_type_index}")
     r.raise_for_status()
     return r.json()
 
 
+@st.cache_data(ttl=300)
 def fetch_price_segments(estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/price_segments/{listing_type}/{estate_type_index}")
     r.raise_for_status()
@@ -98,6 +105,7 @@ def fetch_price_segments(estate_type_index: str, listing_type: str) -> pd.DataFr
     return pd.DataFrame(items)
 
 
+@st.cache_data(ttl=300)
 def fetch_pps_quartiles(estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/pps_quartiles/{listing_type}/{estate_type_index}")
     r.raise_for_status()
@@ -105,6 +113,7 @@ def fetch_pps_quartiles(estate_type_index: str, listing_type: str) -> pd.DataFra
     return pd.DataFrame(items)
 
 
+@st.cache_data(ttl=300)
 def fetch_listing_count(estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/listing_count/{listing_type}/{estate_type_index}")
     r.raise_for_status()
@@ -112,18 +121,21 @@ def fetch_listing_count(estate_type_index: str, listing_type: str) -> pd.DataFra
     return pd.DataFrame({"Quận/Huyện": data["districts"], "Số tin": data["counts"]})
 
 
+@st.cache_data(ttl=300)
 def fetch_field_distribution(estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/field_dist/{listing_type}/{estate_type_index}/{field}")
     r.raise_for_status()
     return pd.DataFrame(r.json()["items"])
 
 
+@st.cache_data(ttl=300)
 def fetch_range_distribution(estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/range_dist/{listing_type}/{estate_type_index}/{field}")
     r.raise_for_status()
     return pd.DataFrame(r.json()["items"])
 
 
+@st.cache_data(ttl=300)
 def fetch_trend_monthly(estate_type_index: str, listing_type: str, district: str = "") -> pd.DataFrame:
     params = {"district": district} if district else {}
     r = requests.get(
