@@ -15,6 +15,7 @@ MAX_PAGE = 50
 # Skip mọi bài đăng có post_date < MIN_DATE. Đặt "" hoặc None để không filter.
 MIN_DATE = "2025-01-01"
 
+
 # Tự động truy vấn cổng NodePort của Kafka external listener từ K8s
 def get_kafka_bootstrap_servers():
     env_val = os.environ.get("KAFKA_BOOTSTRAP_SERVERS")
@@ -24,8 +25,20 @@ def get_kafka_bootstrap_servers():
     try:
         # Chạy kubectl để lấy nodePort của service bootstrap ngoài
         res = subprocess.run(
-            ["kubectl", "get", "svc", "my-cluster-kafka-external-bootstrap", "-n", "kafka", "-o", "jsonpath={.spec.ports[0].nodePort}"],
-            capture_output=True, text=True, check=True, shell=(os.name == "nt")
+            [
+                "kubectl",
+                "get",
+                "svc",
+                "my-cluster-kafka-external-bootstrap",
+                "-n",
+                "kafka",
+                "-o",
+                "jsonpath={.spec.ports[0].nodePort}",
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
+            shell=(os.name == "nt"),
         )
         port = res.stdout.strip()
         if port.isdigit():
@@ -43,7 +56,7 @@ KAFKA_BOOTSTRAP_SERVERS = get_kafka_bootstrap_servers()
 # trong mỗi spider chạy estate_type idx LỚN trước (khác → đất → biệt thự → ... → nhà mặt phố).
 # Dùng khi crawl trước đó dừng giữa chừng — bắt đầu từ phần CHƯA crawl (idx cao = dat/khac).
 # CLI: `python run_new.py --reverse` cũng bật được flag này.
-REVERSE = True
+REVERSE = False
 
 # Mỗi spider tự khai báo các estate_type idx nó hỗ trợ + topic Kafka tương ứng.
 # Comment dòng nào không muốn crawl để skip.

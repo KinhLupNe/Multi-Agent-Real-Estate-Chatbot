@@ -45,7 +45,7 @@ def price_per_square_by_date(estate_type_index: str, district: str, start_date, 
 
 
 @st.cache_data(ttl=300)
-def price_by_district(estate_type_index: str, listing_type):
+def price_by_district(province: str, estate_type_index: str, listing_type):
     endpoint = f"{BASE_URL}/get_price_by_district/{listing_type}/{estate_type_index}"
     response = requests.get(endpoint)
     response.raise_for_status()
@@ -59,7 +59,7 @@ def price_by_district(estate_type_index: str, listing_type):
 
 
 @st.cache_data(ttl=300)
-def price_per_square_by_district(estate_type_index: str, listing_type):
+def price_per_square_by_district(province: str, estate_type_index: str, listing_type):
     endpoint = f"{BASE_URL}/get_price_per_square_by_district/{listing_type}/{estate_type_index}"
     response = requests.get(endpoint)
     response.raise_for_status()
@@ -91,14 +91,14 @@ def area_by_district(estate_type_index: str, listing_type):
 # ============================================================
 
 @st.cache_data(ttl=300)
-def fetch_kpi(estate_type_index: str, listing_type: str):
+def fetch_kpi(province: str, estate_type_index: str, listing_type: str):
     r = requests.get(f"{BASE_URL}/dashboard/kpi/{listing_type}/{estate_type_index}")
     r.raise_for_status()
     return r.json()
 
 
 @st.cache_data(ttl=300)
-def fetch_price_segments(estate_type_index: str, listing_type: str) -> pd.DataFrame:
+def fetch_price_segments(province: str, estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/price_segments/{listing_type}/{estate_type_index}")
     r.raise_for_status()
     items = r.json()["segments"]
@@ -106,7 +106,7 @@ def fetch_price_segments(estate_type_index: str, listing_type: str) -> pd.DataFr
 
 
 @st.cache_data(ttl=300)
-def fetch_pps_quartiles(estate_type_index: str, listing_type: str) -> pd.DataFrame:
+def fetch_pps_quartiles(province: str, estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/pps_quartiles/{listing_type}/{estate_type_index}")
     r.raise_for_status()
     items = r.json()["districts"]
@@ -114,7 +114,7 @@ def fetch_pps_quartiles(estate_type_index: str, listing_type: str) -> pd.DataFra
 
 
 @st.cache_data(ttl=300)
-def fetch_listing_count(estate_type_index: str, listing_type: str) -> pd.DataFrame:
+def fetch_listing_count(province: str, estate_type_index: str, listing_type: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/listing_count/{listing_type}/{estate_type_index}")
     r.raise_for_status()
     data = r.json()
@@ -122,21 +122,21 @@ def fetch_listing_count(estate_type_index: str, listing_type: str) -> pd.DataFra
 
 
 @st.cache_data(ttl=300)
-def fetch_field_distribution(estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
+def fetch_field_distribution(province: str, estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/field_dist/{listing_type}/{estate_type_index}/{field}")
     r.raise_for_status()
     return pd.DataFrame(r.json()["items"])
 
 
 @st.cache_data(ttl=300)
-def fetch_range_distribution(estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
+def fetch_range_distribution(province: str, estate_type_index: str, listing_type: str, field: str) -> pd.DataFrame:
     r = requests.get(f"{BASE_URL}/dashboard/range_dist/{listing_type}/{estate_type_index}/{field}")
     r.raise_for_status()
     return pd.DataFrame(r.json()["items"])
 
 
 @st.cache_data(ttl=300)
-def fetch_trend_monthly(estate_type_index: str, listing_type: str, district: str = "") -> pd.DataFrame:
+def fetch_trend_monthly(province: str, estate_type_index: str, listing_type: str, district: str = "") -> pd.DataFrame:
     params = {"district": district} if district else {}
     r = requests.get(
         f"{BASE_URL}/dashboard/trend_monthly/{listing_type}/{estate_type_index}",

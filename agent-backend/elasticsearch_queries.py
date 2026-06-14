@@ -90,6 +90,9 @@ def get_price_by_district(estate_type="nhamatpho", listing_type="buy"):
         "dat": "dat_index"
     }
     
+    if not valid_districts:
+        return [], [], []
+
     index_name = index_mapping.get(estate_type, "nhamatpho_index")
 
     # 1. Định nghĩa bộ lọc từ khóa "Thuê"
@@ -188,6 +191,9 @@ def get_price_per_square_by_district(estate_type="nhamatpho", listing_type="buy"
         "dat": "dat_index"
     }
 
+    if not valid_districts:
+        return [], [], []
+
     index_name = index_mapping.get(estate_type, "nhamatpho_index")
 
     # 1. Định nghĩa bộ lọc từ khóa "Thuê"
@@ -283,6 +289,9 @@ def get_area_by_district(estate_type="nhamatpho", listing_type="buy"):
         "bietthu": "bietthu_index",
         "dat": "dat_index",
     }
+
+    if not valid_districts:
+        return [], [], []
 
     index_name = index_mapping.get(estate_type, "nhamatpho_index")
 
@@ -615,6 +624,15 @@ def _build_dashboard_bool_query(listing_type, extra_must=None):
 
 def get_market_kpi(estate_type="nhamatpho", listing_type="buy"):
     """4 KPI tổng quan: total listings, median price, median price/m², tin mới 7 ngày + % change vs 7 ngày trước."""
+    if not valid_districts:
+        return {
+            "total_listings": 0,
+            "median_price": 0,
+            "median_price_per_sq": 0,
+            "new_7d": 0,
+            "prev_7d": 0,
+            "pct_change_7d": 0.0,
+        }
     from datetime import datetime, timedelta
     today = datetime.now().date()
     d7 = (today - timedelta(days=7)).strftime("%Y/%m/%d")
@@ -649,6 +667,8 @@ def get_market_kpi(estate_type="nhamatpho", listing_type="buy"):
 
 def get_price_segments(estate_type="nhamatpho", listing_type="buy"):
     """Histogram phân khúc giá: dưới 2 tỷ / 2-5 / 5-10 / 10-30 / >30 tỷ. Trả list[{label, count}]."""
+    if not valid_districts:
+        return []
     bq = _build_dashboard_bool_query(listing_type, extra_must=[_price_range_filter()])
     query = {
         "size": 0,
@@ -677,6 +697,8 @@ def get_price_segments(estate_type="nhamatpho", listing_type="buy"):
 
 def get_price_per_sq_quartiles_by_district(estate_type="nhamatpho", listing_type="buy"):
     """Quartiles giá/m² theo quận → box plot. Trả list[{district, count, p5, p25, p50, p75, p95}]."""
+    if not valid_districts:
+        return []
     bq = _build_dashboard_bool_query(listing_type, extra_must=[_price_per_sq_range_filter()])
     query = {
         "size": 0,
@@ -708,6 +730,8 @@ def get_price_per_sq_quartiles_by_district(estate_type="nhamatpho", listing_type
 
 def get_listing_count_by_district(estate_type="nhamatpho", listing_type="buy"):
     """Số tin đăng mỗi quận → thanh khoản. Trả {districts, counts}."""
+    if not valid_districts:
+        return {"districts": [], "counts": []}
     bq = _build_dashboard_bool_query(listing_type)
     query = {
         "size": 0,
@@ -739,6 +763,8 @@ _FIELD_PATH = {
 
 def get_field_distribution(field, estate_type="nhamatpho", listing_type="buy", top_n=10):
     """Top N giá trị + count cho 1 field, KÈM slice 'Chưa rõ' cho doc thiếu field."""
+    if not valid_districts:
+        return []
     bq = _build_dashboard_bool_query(listing_type)
     es_field = _FIELD_PATH.get(field, field)
     query = {
@@ -788,6 +814,8 @@ _RANGE_PRESETS = {
 
 def get_range_distribution(field, estate_type="nhamatpho", listing_type="buy"):
     """Histogram cho continuous field (front_face, front_road, square). Trả list + slice 'Chưa rõ'."""
+    if not valid_districts:
+        return []
     ranges = _RANGE_PRESETS.get(field)
     if not ranges:
         return []
@@ -814,6 +842,8 @@ def get_range_distribution(field, estate_type="nhamatpho", listing_type="buy"):
 
 def get_price_trend_monthly(estate_type="nhamatpho", listing_type="buy", district=None):
     """Median giá + count theo tháng. Nếu district truyền vào → lọc cho quận đó."""
+    if not valid_districts:
+        return {"months": [], "medians": [], "counts": []}
     extra_must = [_price_range_filter()]
     bq = _build_dashboard_bool_query(listing_type, extra_must=extra_must)
     if district:
