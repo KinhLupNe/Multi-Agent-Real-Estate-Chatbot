@@ -1,9 +1,31 @@
 {
-  "active_chat_id": "4dce33ac-a6a4-40fa-8bc1-86adc18d2102",
+  "active_chat_id": "800fec3b-38c6-494a-91a9-4d248eeb5883",
   "chats": {
-    "4dce33ac-a6a4-40fa-8bc1-86adc18d2102": {
-      "title": "Cuộc hội thoại 04:39 15/06",
-      "messages": []
+    "ffeec784-f8af-4ce5-aa48-353fbb3602f2": {
+      "title": "Tư vấn bất động sản tại Việt Nam",
+      "messages": [
+        {
+          "role": "user",
+          "content": "xin chào"
+        },
+        {
+          "role": "assistant",
+          "content": "Xin chào! Mình là trợ lý ảo chuyên tư vấn **bất động sản tại Việt Nam**.\n\nMình có thể giúp bạn:\n- Tìm bài đăng nhà/đất/chung cư/biệt thự theo khu vực, giá, diện tích, số phòng...\n- Phân tích giá thị trường, gợi ý đầu tư.\n- Cập nhật thông tin dự án nổi bật.\n\n### Phân tích:\nBạn thử đặt một câu hỏi liên quan tới bất động sản nhé — mình có dữ liệu thật từ các sàn rao bán BĐS để tư vấn cụ thể.\n\n**Câu hỏi có thể bạn quan tâm:**\nCho tôi danh sách chung cư dưới 3 tỷ ở quận Cầu Giấy.\nGiá đất nền tại huyện Hoài Đức hiện nay khoảng bao nhiêu?\nCó nhà phố nào ở Hà Nội diện tích trên 60m² dưới 5 tỷ không?"
+        }
+      ]
+    },
+    "800fec3b-38c6-494a-91a9-4d248eeb5883": {
+      "title": "Tìm mua nhà giá 3 tỷ tại Cầu Giấy",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Tìm nhà 3 tỷ ở Cầu Giấy"
+        },
+        {
+          "role": "assistant",
+          "content": "### Danh sách bất động sản tại Cầu Giấy\n\n1. Bán nhà tập thể tầng 1 Mai Dịch, Cầu Giấy\n   - Giá: 3,049,999,870 VNĐ\n   - Diện tích: 70 m²\n   - Địa chỉ: Phường Mai Dịch, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds.com.vn/ban-nha-tap-the-tang-1-%E2%80%93-mai-dich-cau-giay-%E2%80%93-305-ty70m2-p631912.html)\n\n2. Bán chung cư Nam Trung Yên, Cầu Giấy\n   - Giá: 3,200,000,000 VNĐ\n   - Diện tích: 65 m²\n   - Địa chỉ: Khu đô thị Nam Trung Yên, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds.com.vn/ban-chung-cu--nam-trung-yen--cau-giay--65m-2-ngu-2-wc-32--ty-p616502.html)\n\n3. Chủ bán chung cư đường Hoàng Đạo Thúy, Cầu Giấy\n   - Giá: 2,700,000,000 VNĐ\n   - Diện tích: 78 m²\n   - Địa chỉ: Phường Trung Hòa, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds.com.vn/chu-ban-chung-cu-duong-hoang-dao-thuy-cau-giay-ha-noi--78m-2-ngu-gia-26-ty-0987063288-p569711.html)\n\n4. Bán chung cư A10 Nam Trung Yên, Cầu Giấy\n   - Giá: 2,800,000,000 VNĐ\n   - Diện tích: 66 m²\n   - Địa chỉ: Phường Yên Hòa, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds.com.vn/ban-chung-cu-a10-nam-trung-yen-cau-giay-66m-2-ngu-2-wc-gia-27-ty-0987063288-p568207.html)\n\n5. Bán căn hộ A6 Nam Trung Yên\n   - Giá: 3,000,000,000 VNĐ\n   - Địa chỉ: Đường Mạc Thái Tổ, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds68.com.vn/ban-chung-cu/ha-noi/cau-giay/nam-trung-yen/ban-can-ho-a6-nam-trung-yen-2-phong-ngu-1-ve-sinh-nha-dep-gia-3-ty-co-bot-lien-he-0349627688-pr29955772)\n\n6. Bán nhà tập thể Nguyễn Khánh Toàn, Cầu Giấy\n   - Giá: 2,950,000,130 VNĐ\n   - Diện tích: 52 m²\n   - Địa chỉ: Phường Quan Hoa, Quận Cầu Giấy, Hà Nội\n   - [Xem chi tiết](https://bds.com.vn/ban-nha-tap-the-295-ty-%E2%80%93-nguyen-khanh-toan-cau-giay-%E2%80%93-rong-52m2-p631910.html)\n\n### Phân tích:\nTrong số các lựa chọn hiện có, căn hộ tại đường Hoàng Đạo Thúy với giá 2,700,000,000 VNĐ và diện tích 78 m² là lựa chọn tốt nhất về mặt diện tích và giá cả. Đây là một căn hộ chung cư với mức giá dưới 3 tỷ, phù hợp với ngân sách của bạn.\n\nCăn hộ tại A10 Nam Trung Yên với giá 2,800,000,000 VNĐ cũng là một lựa chọn hợp lý với diện tích 66 m² và giá cả vừa phải. Tuy nhiên, nếu bạn ưu tiên diện tích lớn hơn, căn hộ tại đường Hoàng Đạo Thúy vẫn là lựa chọn tối ưu.\n\nNhững căn hộ khác như tại Mai Dịch và Nguyễn Khánh Toàn có giá cao hơn hoặc diện tích nhỏ hơn, không tối ưu bằng hai lựa chọn trên.\n\nKhuyến nghị của tôi là nên xem xét kỹ lưỡng căn hộ tại Hoàng Đạo Thúy và A10 Nam Trung Yên. Bạn cũng nên kiểm tra tình trạng pháp lý và chất lượng xây dựng trước khi quyết định đầu tư.\n\n**Câu hỏi có thể bạn quan tâm:**\nBạn có ưu tiên về loại hình bất động sản (chung cư, nhà tập thể)?\nBạn có yêu cầu cụ thể về tiện ích xung quanh không?\nBạn có cần hỗ trợ về thủ tục pháp lý khi mua nhà không?\nBạn có sẵn sàng thương lượng giá với chủ nhà không?"
+        }
+      ]
     }
   }
 }

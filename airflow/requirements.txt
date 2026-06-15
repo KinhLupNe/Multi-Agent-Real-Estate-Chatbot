@@ -1,0 +1,15 @@
+# Dependencies tầng Airflow (cho các DAG trong airflow/dags/).
+#
+# LƯU Ý: Khi chạy thật, container đã có sẵn các package này qua base image
+# apache/airflow:2.9.3-python3.11 (xem airflow/Dockerfile) — KHÔNG cần file này
+# để deploy. File này chỉ dùng để cài vào env LOCAL giúp IDE resolve được import
+# (hết báo đỏ "could not be resolved" cho pendulum / airflow).
+#
+# Phiên bản ghim khớp đúng base image (Airflow 2.9.3, Python 3.11).
+#
+# Cách cài (NÊN dùng constraints của Airflow để tránh xung đột dependency):
+#   pip install -r airflow/requirements.txt \
+#     -c "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.3/constraints-3.11.txt"
+
+apache-airflow==2.9.3
+pendulum>=3.0,<4.0

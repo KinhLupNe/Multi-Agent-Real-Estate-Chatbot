@@ -39,7 +39,7 @@ Phải thấy 6 indices (pipeline v3, flat schema): `nhamatpho_index`, `nharieng
 | ES endpoint | `http://127.0.0.1:9200` |
 | Kibana UI | http://localhost:5601 |
 | User | `elastic` |
-| Password | `z47O5lJxA1M30lB35tV8Xa4y` |
+| Pasrword | 5o6gdiSRdm4O2G9Sy186T20O|
 
 Dùng các thông tin này trong code training của bạn.
 

@@ -1,0 +1,229 @@
+=== STDERR ===
+2026-06-15 08:07:40 [scrapy.utils.log] INFO: Scrapy 2.15.2 started (bot: crawlerbds)
+2026-06-15 08:07:41 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.15.2',
+ 'cssselect': '1.4.0',
+ 'parsel': '1.11.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, '
+           '17:12:15) [MSC v.1942 64 bit (AMD64)]',
+ 'pyOpenSSL': '26.2.0 (OpenSSL 3.6.2 7 Apr 2026)',
+ 'cryptography': '48.0.0',
+ 'Platform': 'Windows-10-10.0.26200-SP0'}
+2026-06-15 08:07:41 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-06-15 08:07:41 [asyncio] DEBUG: Using selector: SelectSelector
+2026-06-15 08:07:41 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-06-15 08:07:41 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-06-15 08:07:41 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2026-06-15 08:07:41 [scrapy.extensions.telnet] INFO: Telnet Password: fd111307e4624c98
+2026-06-15 08:07:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-06-15 08:07:41 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'crawlerbds',
+ 'DOWNLOAD_DELAY': '1',
+ 'DOWNLOAD_TIMEOUT': 600,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE_APPEND': False,
+ 'NEWSPIDER_MODULE': 'crawlerbds.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['crawlerbds.spiders']}
+2026-06-15 08:07:41 [asyncio] DEBUG: Using proactor: IocpProactor
+2026-06-15 08:07:41 [scrapy-playwright] INFO: Started loop on separate thread: <ProactorEventLoop running=True closed=False debug=False>
+2026-06-15 08:07:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-06-15 08:07:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-06-15 08:07:41 [py.warnings] WARNING: C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\sklearn\utils\_param_validation.py:14: UserWarning: A NumPy version >=1.26.4 and <2.7.0 is required for this version of SciPy (detected version 1.26.3)
+  from scipy.sparse import csr_matrix, issparse
+
+2026-06-15 08:07:46 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawlerbds.pipelines.TextNormalizePipeline',
+ 'crawlerbds.pipelines.AddressCorretionPipeline',
+ 'crawlerbds.pipelines.FieldsPreprocessPipeline',
+ 'crawlerbds.pipelines.DuplicateCheckPipeline',
+ 'crawlerbds.pipelines.PushToKafka']
+2026-06-15 08:07:46 [scrapy.core.engine] INFO: Spider opened
+2026-06-15 08:07:46 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-06-15 08:07:46 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2026-06-15 08:07:46 [scrapy-playwright] INFO: Starting download handler
+2026-06-15 08:07:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/robots.txt> (referer: None)
+2026-06-15 08:07:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke> (referer: None)
+2026-06-15 08:07:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-binh> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke)
+2026-06-15 08:07:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/ban-biet-thu-2-mat-tien--vi-tri-dep-dt-300m2--h-dong---bac---r15xd20m-p569118.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-binh)
+2026-06-15 08:07:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/ban-biet-thu-2-mat-tien--vi-tri-dep-dt-300m2--h-dong---bac---r15xd20m-p569118.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-binh)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:07:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/ban-biet-thu-mini-3-mat-tien-view-ho-phong-cach-chau-au-p488905.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-binh)
+2026-06-15 08:07:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/ban-biet-thu-mini-3-mat-tien-view-ho-phong-cach-chau-au-p488905.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-binh)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:07:57 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-06-15 08:07:57 [scrapy.extensions.feedexport] INFO: Stored json feed (0 items) in: crawled_data\ninh-binh\bds_spider_ninh-binh_bietthu.json
+2026-06-15 08:07:57 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1563,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 41693,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 5,
+ 'elapsed_time_seconds': 11.567762,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 6, 15, 1, 7, 57, 661522, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 263316,
+ 'httpcompression/response_count': 4,
+ 'items_per_minute': 0.0,
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 4,
+ 'request_depth_max': 2,
+ 'response_received_count': 5,
+ 'responses_per_minute': 27.272727272727273,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 4,
+ 'scheduler/dequeued/memory': 4,
+ 'scheduler/enqueued': 4,
+ 'scheduler/enqueued/memory': 4,
+ 'spider_exceptions/IndexError': 2,
+ 'spider_exceptions/count': 2,
+ 'start_time': datetime.datetime(2026, 6, 15, 1, 7, 46, 93760, tzinfo=datetime.timezone.utc)}
+2026-06-15 08:07:57 [scrapy.core.engine] INFO: Spider closed (finished)
+
+
+=== STDOUT ===

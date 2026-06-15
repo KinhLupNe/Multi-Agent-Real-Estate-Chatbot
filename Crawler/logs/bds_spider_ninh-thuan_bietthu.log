@@ -1,0 +1,633 @@
+=== STDERR ===
+2026-06-15 08:12:42 [scrapy.utils.log] INFO: Scrapy 2.15.2 started (bot: crawlerbds)
+2026-06-15 08:12:42 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.15.2',
+ 'cssselect': '1.4.0',
+ 'parsel': '1.11.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, '
+           '17:12:15) [MSC v.1942 64 bit (AMD64)]',
+ 'pyOpenSSL': '26.2.0 (OpenSSL 3.6.2 7 Apr 2026)',
+ 'cryptography': '48.0.0',
+ 'Platform': 'Windows-10-10.0.26200-SP0'}
+2026-06-15 08:12:42 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-06-15 08:12:42 [asyncio] DEBUG: Using selector: SelectSelector
+2026-06-15 08:12:42 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-06-15 08:12:42 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-06-15 08:12:42 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2026-06-15 08:12:42 [scrapy.extensions.telnet] INFO: Telnet Password: e4544f3341e11f48
+2026-06-15 08:12:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-06-15 08:12:42 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'crawlerbds',
+ 'DOWNLOAD_DELAY': '1',
+ 'DOWNLOAD_TIMEOUT': 600,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE_APPEND': False,
+ 'NEWSPIDER_MODULE': 'crawlerbds.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['crawlerbds.spiders']}
+2026-06-15 08:12:42 [asyncio] DEBUG: Using proactor: IocpProactor
+2026-06-15 08:12:42 [scrapy-playwright] INFO: Started loop on separate thread: <ProactorEventLoop running=True closed=False debug=False>
+2026-06-15 08:12:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-06-15 08:12:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-06-15 08:12:42 [py.warnings] WARNING: C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\sklearn\utils\_param_validation.py:14: UserWarning: A NumPy version >=1.26.4 and <2.7.0 is required for this version of SciPy (detected version 1.26.3)
+  from scipy.sparse import csr_matrix, issparse
+
+2026-06-15 08:12:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawlerbds.pipelines.TextNormalizePipeline',
+ 'crawlerbds.pipelines.AddressCorretionPipeline',
+ 'crawlerbds.pipelines.FieldsPreprocessPipeline',
+ 'crawlerbds.pipelines.DuplicateCheckPipeline',
+ 'crawlerbds.pipelines.PushToKafka']
+2026-06-15 08:12:45 [scrapy.core.engine] INFO: Spider opened
+2026-06-15 08:12:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-06-15 08:12:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-06-15 08:12:45 [scrapy-playwright] INFO: Starting download handler
+2026-06-15 08:12:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/robots.txt> (referer: None)
+2026-06-15 08:12:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke> (referer: None)
+2026-06-15 08:12:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke)
+2026-06-15 08:12:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/nha-pho-lien-ke-phan-khu-dep-nhat-ck-uu-dai-len-den-12-p447766.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:12:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/nha-pho-lien-ke-phan-khu-dep-nhat-ck-uu-dai-len-den-12-p447766.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/phan-khu-dep-nhat-tai-nha-pho-shophouse-hacom-mall-ninh-thuan-p468842.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/phan-khu-dep-nhat-tai-nha-pho-shophouse-hacom-mall-ninh-thuan-p468842.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/binh-son-ocean-park---phan-rang---thap-cham-tinh-ninh-thuan-p665005.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/binh-son-ocean-park---phan-rang---thap-cham-tinh-ninh-thuan-p665005.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/ban-nha-pho-giua-long-do-thi-bien-binh-son-ocean-park-p702705.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:05 [scrapy.core.scraper] ERROR: Error processing {'address': {'district': None,
+             'full_address': 'Bình S\u01a1n Ocean Part',
+             'province': 'Ninh Thu\u1eadn',
+             'ward': None},
+ 'contact_info': {'name': 'Ph\u1ea1m Thu Trang', 'phone': ['0852291298']},
+ 'description': 'C\u1eadp nh\u1eadt d\u1ef1 án Khu \u0110ô Th\u1ecb Bi\u1ec3n Bình S\u01a1n – Khánh Hòa 2 , t\u1ecda '
+                'l\u1ea1c trên tr\u1ee5c \u0111\u01b0\u1eddng Ven Bi\u1ec3n Yên Ninh , mang \u0111\u1ebfn nh\u1eefng c\u01a1 h\u1ed9i '
+                'tuy\u1ec7t v\u1eddi cho nh\u1eefng ai \u0111ang tìm ki\u1ebfm m\u1ed9t không gian s\u1ed1ng \u0111\u1eb3ng '
+                'c\u1ea5p . Các c\u0103n h\u1ed9 t\u1ea1i Lock - LK05A và Lock - LK06C có di\u1ec7n '
+                'tích sàn 81 m2 , thông th\u1ee7y t\u1eeb 333 m2 \u0111\u1ebfn 361 m2 . Thi\u1ebft k\u1ebf '
+                'hi\u1ec7n \u0111\u1ea1i v\u1edbi 1 tr\u1ec7t , 3 l\u1ea7u và 1 mái , \u0111\u1ea3m b\u1ea3o không gian '
+                's\u1ed1ng r\u1ed9ng rãi . C\u0103n h\u1ed9 s\u1ebd \u0111\u01b0\u1ee3c bàn giao hoàn thi\u1ec7n m\u1eb7t ngoài '
+                'và t\u1ea7ng 1 . Còn t\u1ea1i Lock - LK08 , v\u1edbi di\u1ec7n tích sàn 100 m2 , '
+                'thông th\u1ee7y t\u1eeb 420 m2 \u0111\u1ebfn 428 m2 , thi\u1ebft k\u1ebf 1 tr\u1ec7t , 3 l\u1ea7u và '
+                '1 mái , b\u1ea1n s\u1ebd \u0111\u01b0\u1ee3c nh\u1eadn bàn giao hoàn thi\u1ec7n full m\u1eb7t ngoài . '
+                '\u0110\u1eb7c bi\u1ec7t , c\u0103n h\u1ed9 này s\u1edf h\u1eefu m\u1eb7t ti\u1ec1n \u0111\u01b0\u1eddng VIP Ph\u1ea1m \u0110ình H\u1ed5 '
+                'r\u1ed9ng 21 m . M\u1ed9t \u0111i\u1ec3m n\u1ed5i b\u1eadt không th\u1ec3 b\u1ecf qua là các c\u0103n h\u1ed9 '
+                '\u0111\u1ec1u có S\u1ed4 H\u1ed2NG s\u1edf h\u1eefu lâu dài , \u0111\u1ea3m b\u1ea3o quy\u1ec1n l\u1ee3i lâu dài cho '
+                'ch\u1ee7 s\u1edf h\u1eefu . Thêm vào \u0111ó , chúng tôi t\u1eb7ng gói hoàn thi\u1ec7n n\u1ed9i '
+                'th\u1ea5t lên \u0111\u1ebfn 100 tri\u1ec7u \u0111\u1ed3ng b\u1eb1ng ti\u1ec1n m\u1eb7t , chi\u1ebft kh\u1ea5u lên '
+                '\u0111\u1ebfn 10 % và mi\u1ec5n phí qu\u1ea3n lý v\u1eadn hành trong 24 tháng . S\u1ed1 '
+                'l\u01b0\u1ee3ng c\u0103n h\u1ed9 có h\u1ea1n , hãy nhanh tay liên h\u1ec7 v\u1edbi tôi qua s\u1ed1 '
+                '0852.291.298 – Thu Trang ( PKD ) \u0111\u1ec3 không b\u1ecf l\u1ee1 c\u01a1 h\u1ed9i s\u1edf h\u1eefu '
+                'không gian s\u1ed1ng lý t\u01b0\u1edfng này .',
+ 'estate_type': 'Bi\u1ec7t th\u1ef1',
+ 'extra_infos': {'S\u1ed1 phòng ng\u1ee7 :': '10', 'T\u1ea7ng :': '4'},
+ 'link': 'https://bds.com.vn/ban-nha-pho-giua-long-do-thi-bien-binh-son-ocean-park-p702705.html',
+ 'post_date': '21/04/2025',
+ 'post_id': '702705',
+ 'price': '6.50 t\u1ef7',
+ 'square': '81 m2',
+ 'title': 'BÁN NHÀ PH\u1ed0 GI\u1eeeA LÒNG \u0110Ô TH\u1eca BI\u1ec2N BÌNH S\u01a0N OCEAN PARK'}
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\scraper.py", line 502, in start_itemproc_async
+    output = await self.itemproc.process_item_async(item)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\pipelines\__init__.py", line 61, in process_item_async
+    return await self._process_chain(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\middleware.py", line 152, in _process_chain
+    method(obj, *(*args, self._spider)), _warn=warn
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 311, in process_item
+    self.correct_district(
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 143, in correct_district
+    district = self.address_correcter.correct_district(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\geoapivietnam\main.py", line 251, in correct_district
+    print(f'Can not correct for {color("Red")}{district}{color("Default")}, return "No-data"')
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u01a1' in position 31: character maps to <undefined>
+2026-06-15 08:13:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/mo-ban-dat-nen-81m2-nha-4-tang-tai-binh-son-ocean-park-chi-25-ty-vnd-p704790.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:05 [scrapy.core.scraper] ERROR: Error processing {'address': {'district': None,
+             'full_address': 'Bình S\u01a1n Ocean Part , Bình S\u01a1n Ocean Part',
+             'province': 'Ninh Thu\u1eadn',
+             'ward': None},
+ 'contact_info': {'name': 'Nguy\u1ec5n Ng\u1ecdc H\u1eadu', 'phone': ['0334877208']},
+ 'description': '\u0110\u1ea5t n\u1ec1n t\u1ea1i Bình S\u01a1n Ocean Park , t\u1ecda l\u1ea1c trên \u0111\u01b0\u1eddng Yên Ninh '
+                ', ph\u01b0\u1eddng M\u1ef9 Bình , Phan Rang - Tháp Chàm , Ninh Thu\u1eadn , \u0111ang '
+                'ch\u1edd \u0111ón b\u1ea1n ! V\u1edbi di\u1ec7n tích 81 m² và m\u1ee9c giá 2.5 t\u1ef7 VND , \u0111ây '
+                'là c\u01a1 h\u1ed9i h\u1ea5p d\u1eabn cho nh\u1eefng ai \u0111ang tìm ki\u1ebfm m\u1ed9t v\u1ecb trí lý '
+                't\u01b0\u1edfng \u0111\u1ec3 \u0111\u1ea7u t\u01b0 . Khu \u0111\u1ea5t có m\u1eb7t ti\u1ec1n r\u1ed9ng 12 m thu\u1eadn l\u1ee3i cho '
+                'vi\u1ec7c di chuy\u1ec3n b\u1eb1ng xe ô tô , cùng v\u1edbi pháp lý \u0111\u1ea7y \u0111\u1ee7 , \u0111\u1ea3m '
+                'b\u1ea3o an toàn cho các giao d\u1ecbch c\u1ee7a b\u1ea1n . Khu v\u1ef1c này không ch\u1ec9 '
+                '\u0111\u1eb9p mà còn h\u1ee9a h\u1eb9n ti\u1ec1m n\u0103ng phát tri\u1ec3n m\u1ea1nh m\u1ebd cho kinh '
+                'doanh . Xung quanh khu v\u1ef1c , b\u1ea1n s\u1ebd tìm th\u1ea5y nhi\u1ec1u ti\u1ec7n ích '
+                'n\u1ed5i b\u1eadt nh\u01b0 công viên bi\u1ec3n Bình S\u01a1n và siêu th\u1ecb Winmart '
+                'Vincom Phan Rang , t\u1ea1o \u0111i\u1ec1u ki\u1ec7n thu\u1eadn l\u1ee3i cho cu\u1ed9c s\u1ed1ng hàng '
+                'ngày . D\u1ef1 án Bình S\u01a1n Ocean Park , do Công ty CP \u0110\u1ea7u t\u01b0 '
+                'HacomHolding phát tri\u1ec3n , \u0111\u01b0\u1ee3c thi\u1ebft k\u1ebf v\u1edbi ba phân khu riêng '
+                'bi\u1ec7t : Khu A v\u1edbi công viên m\u1edf và d\u1ecbch v\u1ee5 du l\u1ecbch , Khu B v\u1edbi '
+                'v\u01b0\u1eddn cây xanh , và Khu C là khu \u0111ô th\u1ecb th\u01b0\u01a1ng m\u1ea1i và ngh\u1ec9 '
+                'd\u01b0\u1ee1ng . Các ti\u1ec7n ích n\u1ed5i b\u1eadt nh\u01b0 khách s\u1ea1n qu\u1ed1c t\u1ebf 4 sao , '
+                'khu vui ch\u01a1i , Gym & Spa , cùng v\u1edbi trung tâm th\u1ea9m m\u1ef9 và nhà '
+                'hàng s\u1ebd mang \u0111\u1ebfn cu\u1ed9c s\u1ed1ng \u0111\u1ea7y \u0111\u1ee7 ti\u1ec7n nghi cho c\u01b0 dân . N\u1ebfu '
+                'b\u1ea1n quan tâm và mu\u1ed1n bi\u1ebft thêm thông tin , hãy liên h\u1ec7 v\u1edbi '
+                'tôi qua s\u1ed1 \u0111i\u1ec7n tho\u1ea1i 0334 8777208 - Nguy\u1ec5n H\u1eadu .',
+ 'estate_type': 'Bi\u1ec7t th\u1ef1',
+ 'extra_infos': {'S\u1ed1 phòng ng\u1ee7 :': '5', 'S\u1ed1 toilet :': '3', 'T\u1ea7ng :': '4'},
+ 'link': 'https://bds.com.vn/mo-ban-dat-nen-81m2-nha-4-tang-tai-binh-son-ocean-park-chi-25-ty-vnd-p704790.html',
+ 'post_date': '25/04/2025',
+ 'post_id': '704790',
+ 'price': '2 t\u1ef7',
+ 'square': '81 m2',
+ 'title': 'M\u1edf bán \u0111\u1ea5t n\u1ec1n 81 m2 nhà 4 t\u1ea7ng t\u1ea1i Bình S\u01a1n Ocean Park ch\u1ec9 2.5 t\u1ef7 '
+          'VND'}
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\scraper.py", line 502, in start_itemproc_async
+    output = await self.itemproc.process_item_async(item)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\pipelines\__init__.py", line 61, in process_item_async
+    return await self._process_chain(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\middleware.py", line 152, in _process_chain
+    method(obj, *(*args, self._spider)), _warn=warn
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 311, in process_item
+    self.correct_district(
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 143, in correct_district
+    district = self.address_correcter.correct_district(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\geoapivietnam\main.py", line 251, in correct_district
+    print(f'Can not correct for {color("Red")}{district}{color("Default")}, return "No-data"')
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u01a1' in position 31: character maps to <undefined>
+2026-06-15 08:13:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/can-goc-shophouse--phan-rang-thap-cham-ninh-thuan-p642200.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/can-goc-shophouse--phan-rang-thap-cham-ninh-thuan-p642200.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/can-shophouse-khu-k2--phan-rang-thap-cham-ninh-thuan-p642203.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/can-shophouse-khu-k2--phan-rang-thap-cham-ninh-thuan-p642203.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/shophouse-mat-bien-binh-son-ocean-park-ninh-thuan-chi-tu-25-ty40-so-huu-ngay-p680578.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:10 [scrapy.core.scraper] ERROR: Spider error processing <GET https://bds.com.vn/shophouse-mat-bien-binh-son-ocean-park-ninh-thuan-chi-tu-25-ty40-so-huu-ngay-p680578.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\defer.py", line 357, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\utils\python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\spidermiddlewares\base.py", line 60, in process_spider_output
+    for o in result:
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 186, in process_sync
+    self._process_spider_exception(
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 259, in _process_spider_exception
+    raise exception
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\spidermw.py", line 182, in process_sync
+    yield from iterable
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\spiders\bds_spider.py", line 228, in parse_real_estate_page
+    response.css("ul.list-attr-hot")[0]
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\parsel\selector.py", line 139, in __getitem__
+    o = super().__getitem__(pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+2026-06-15 08:13:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://bds.com.vn/chi-18trm2-de-so-huu-nha-khu-do-thi-giua-long-thanh-pho-bien-p703073.html> (referer: https://bds.com.vn/mua-ban-nha-biet-thu-lien-ke-ninh-thuan)
+2026-06-15 08:13:11 [scrapy.core.scraper] ERROR: Error processing {'address': {'district': None,
+             'full_address': 'Bình S\u01a1n Ocean Part , Bình S\u01a1n Ocean Part',
+             'province': 'Ninh Thu\u1eadn',
+             'ward': None},
+ 'contact_info': {'name': 'Ph\u1ea1m Thu Trang', 'phone': ['0852291298']},
+ 'description': 'C\u01a1 h\u1ed9i s\u1edf h\u1eefu ngôi nhà 4 t\u1ea7ng ven bi\u1ec3n ch\u1ec9 v\u1edbi 6.5 t\u1ef7 ! " Nha '
+                'Trang th\u1ee9 2 n\u1eb1m t\u1ea1i Ninh Thu\u1eadn " \u0110ây là c\u01a1 h\u1ed9i \u0111\u1ea7u t\u01b0 b\u1ec1n '
+                'v\u1eefng v\u1edbi không gian s\u1ed1ng \u0111\u1eb3ng c\u1ea5p và ti\u1ec1m n\u0103ng kinh doanh l\u1edbn '
+                '. ---------------------------------------- - V\u1ecb trí chi\u1ebfn '
+                'l\u01b0\u1ee3c : T\u1ecda l\u1ea1c t\u1ea1i Bình S\u01a1n Ocean Park , khu Hacom K2 , Phan '
+                'Rang , ngay m\u1eb7t bi\u1ec3n Bình S\u01a1n , TP Phan Rang Tháp Chàm , Ninh '
+                'Thu\u1eadn . - N\u1eb1m trên tuy\u1ebfn \u0111\u01b0\u1eddng Yên Ninh - cung \u0111\u01b0\u1eddng bi\u1ec3n n\u1ed5i '
+                'ti\u1ebfng , t\u01b0\u01a1ng t\u1ef1 nh\u01b0 Tr\u1ea7n Phú ( Nha Trang ) , Võ Nguyên Giáp '
+                '( \u0110à N\u1eb5ng ) , Hoàng Qu\u1ed1c Vi\u1ec7t ( H\u1ea1 Long ) . - Khu \u0111ô th\u1ecb hi\u1ec7n '
+                '\u0111\u1ea1i , v\u1edbi \u0111\u1ea7y \u0111\u1ee7 ti\u1ec7n ích lý t\u01b0\u1edfng cho vi\u1ec7c s\u1ed1ng và kinh '
+                'doanh . ---------------------------------------- - Di\u1ec7n tích '
+                '\u0111\u1ea5t : 81 m2 - 100 m2 - Di\u1ec7n tích s\u1eed d\u1ee5ng : ~ 350 m² - K\u1ebft c\u1ea5u '
+                ': 4 t\u1ea7ng – thi\u1ebft k\u1ebf hi\u1ec7n \u0111\u1ea1i , t\u1ed1i \u01b0u hóa không gian s\u1ed1ng - '
+                'Pháp lý : S\u1ed5 \u0111\u1ecf chính ch\u1ee7 , s\u1edf h\u1eefu lâu dài Không gian s\u1ed1ng lý '
+                't\u01b0\u1edfng : - Ch\u1ec9 vài b\u01b0\u1edbc chân là \u0111\u1ebfn bi\u1ec3n xanh , t\u1eadn h\u01b0\u1edfng '
+                'không khí trong lành . - Khu \u0111ô th\u1ecb hi\u1ec7n \u0111\u1ea1i v\u1edbi ti\u1ec7n ích '
+                'phong phú : công viên , trung tâm th\u01b0\u01a1ng m\u1ea1i , tr\u01b0\u1eddng h\u1ecdc … - '
+                'V\u1ecb trí \u0111\u1eb9p , v\u1eeba \u1edf v\u1eeba có kh\u1ea3 n\u0103ng sinh l\u1eddi . Ngôi nhà không '
+                'ch\u1ec9 là n\u01a1i trú \u1ea9n , mà còn là tài s\u1ea3n giá tr\u1ecb giúp b\u1ea1n t\u1eadn '
+                'h\u01b0\u1edfng cu\u1ed9c s\u1ed1ng x\u1ee9ng \u0111áng nh\u1ea5t ! '
+                '----------------------------------- CHÍNH SÁCH \u01afU \u0110ÃI \u0110\u1eb6C '
+                'BI\u1ec6T : - Chi\u1ebft kh\u1ea5u lên \u0111\u1ebfn 8 % khi thanh toán nhanh 95 % . - '
+                'Chi\u1ebft kh\u1ea5u 2 % khi thanh toán theo ti\u1ebfn \u0111\u1ed9 ( 13 \u0111\u1ee3t / 18 '
+                'tháng ) . - H\u1ed7 tr\u1ee3 mi\u1ec5n phí 100 % g\u1ed1c & lãi trong 18 tháng '
+                'cùng nhi\u1ec1u \u01b0u \u0111ãi h\u1ea5p d\u1eabn khác . Liên h\u1ec7 v\u1edbi tôi , Thu Trang '
+                'Phòng Kinh Doanh , \u0111\u1ec3 \u0111\u01b0\u1ee3c t\u01b0 v\u1ea5n chi ti\u1ebft và nh\u1eadn c\u01a1 h\u1ed9i \u0111\u1ea7u '
+                't\u01b0 h\u1ea5p d\u1eabn này .',
+ 'estate_type': 'Bi\u1ec7t th\u1ef1',
+ 'extra_infos': {'S\u1ed1 phòng ng\u1ee7 :': '10', 'T\u1ea7ng :': '4'},
+ 'link': 'https://bds.com.vn/chi-18trm2-de-so-huu-nha-khu-do-thi-giua-long-thanh-pho-bien-p703073.html',
+ 'post_date': '22/04/2025',
+ 'post_id': '703073',
+ 'price': '6.50 t\u1ef7',
+ 'square': '81 m2',
+ 'title': 'CH\u1ec8 18TR / M2 \u0110\u1ec2 S\u1ede H\u1eeeU NHÀ KHU \u0110Ô TH\u1eca GI\u1eeeA LÒNG THÀNH PH\u1ed0 BI\u1ebaN'}
+Traceback (most recent call last):
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\core\scraper.py", line 502, in start_itemproc_async
+    output = await self.itemproc.process_item_async(item)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\pipelines\__init__.py", line 61, in process_item_async
+    return await self._process_chain(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\scrapy\middleware.py", line 152, in _process_chain
+    method(obj, *(*args, self._spider)), _warn=warn
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 311, in process_item
+    self.correct_district(
+  File "E:\nam4\ky2\DataScience\Project\Test\Crawler\crawlerbds\pipelines.py", line 143, in correct_district
+    district = self.address_correcter.correct_district(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\site-packages\geoapivietnam\main.py", line 251, in correct_district
+    print(f'Can not correct for {color("Red")}{district}{color("Default")}, return "No-data"')
+  File "C:\Users\KinhLup\miniconda3\envs\bds_crawler\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u01a1' in position 31: character maps to <undefined>
+2026-06-15 08:13:11 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-06-15 08:13:11 [scrapy.extensions.feedexport] INFO: Stored json feed (0 items) in: crawled_data\ninh-thuan\bds_spider_ninh-thuan_bietthu.json
+2026-06-15 08:13:11 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 4277,
+ 'downloader/request_count': 12,
+ 'downloader/request_method_count/GET': 12,
+ 'downloader/response_bytes': 110059,
+ 'downloader/response_count': 12,
+ 'downloader/response_status_count/200': 12,
+ 'elapsed_time_seconds': 25.161704,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 6, 15, 1, 13, 11, 137144, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 679607,
+ 'httpcompression/response_count': 11,
+ 'items_per_minute': 0.0,
+ 'log_count/DEBUG': 12,
+ 'log_count/ERROR': 9,
+ 'log_count/INFO': 4,
+ 'request_depth_max': 2,
+ 'response_received_count': 12,
+ 'responses_per_minute': 28.799999999999997,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 6,
+ 'spider_exceptions/count': 6,
+ 'start_time': datetime.datetime(2026, 6, 15, 1, 12, 45, 975440, tzinfo=datetime.timezone.utc)}
+2026-06-15 08:13:11 [scrapy.core.engine] INFO: Spider closed (finished)
+
+
+=== STDOUT ===
